@@ -99,6 +99,7 @@ export default class App extends Component {
               className='react-player'
               width='100%'
               height='100%'
+              popover={true}
               url={url}
               playing={playing}
               playbackRate={playbackRate}

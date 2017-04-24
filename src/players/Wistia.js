@@ -92,7 +92,12 @@ export default class Wistia extends Base {
   }
   render () {
     const id = this.getID(this.props.url)
-    const className = `wistia_embed wistia_async_${id}`
+    let className = `wistia_embed wistia_async_${id}`
+
+    if (this.props.popover) {
+      className += ` popover=true popoverAnimateThumbnail=true`
+    }
+
     const style = {
       width: '100%',
       height: '100%',
